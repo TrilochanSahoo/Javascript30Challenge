@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Tricks</title>
+</head>
+<body>
+    <p onClick="makeGreen()">Hello this is about console tricks</p>
+    <script>
+        const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+        //style
+        function makeGreen(){
+            const p = document.querySelector('p');
+            p.style.color = '#BADA55';
+            p.style.fontSize = '40px';
+        }
+
+        // Regular
+        console.log("Hello man")
+        // Interpolated
+        var a = 2
+        console.log("hy this one is %s string",'haha');
+        console.log(`This is the ${a} no of strings`);
+
+        // Styled
+        console.log('%c is for styled the letter.','color:blue; font-size:20px; background:red');
+
+        // warning!
+        console.warn('Ohhh...no')
+
+        // Error :|
+        console.error('this is an error');
+
+        // Info
+        console.info('earth moves around the sun');
+
+        // Testing
+        const p = document.querySelector('p');
+        console.assert(1===2,'thats wrong')
+        // clearing
+        console.clear()
+
+        // Viewing DOM Elements
+        console.log(p)
+        console.dir(p)
+        // Grouping together
+        dogs.forEach(dog => {
+            console.group(`${dog.name}`);
+            console.log(`this is ${dog.name}`);
+            console.log(`${dog.name} is ${dog.age} year`)
+            console.groupEnd(`${dog.name}`);
+        })
+
+        // counting
+        console.count('web')
+        console.count('web')
+        console.count('python')
+        console.count('python')
+        console.count('web')
+        console.count('python')
+        console.count('web')
+        console.count('web')
+
+        // timing
+        console.time('fetch data')
+        fetch('https://api.github.com/users/wesbos').then(data => data.json()).then(data => {
+            console.timeEnd('fetch data');
+            console.log(data);
+        })
+    </script>
+</body>
+</html>
