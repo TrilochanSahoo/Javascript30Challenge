@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    background-color: aqua;
+}
+
+.inbox{
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+}
+
+.inboxItem{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1.5px solid aqua;
+    border-radius: 5px;
+}
+
+.inboxItem:last-child{
+    border-bottom: 0;
+}
+
+input[type="checkbox"]{
+    margin: 15px 30px ;
+}
+
+p{
+    margin: 0;
+    padding: 15px;
+    padding-right: 0;
+    flex: 0.8;
+    font-size: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    border-left: 1.5px solid aqua;
+    border-radius: 4px;
+}
+
+input:checked + p{
+    background: whitesmoke;
+    /* padding-right: 0; */
+    text-decoration: line-through;
+}
