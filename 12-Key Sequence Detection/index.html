@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Sequence Detection</title>
+    <script type="text/javascript" src="https://www.cornify.com/js/cornify.js" ></script>
+</head>
+<body>
+    <script>
+        let keyStore = [];
+        const secretCode = 'wwaassdd'
+        window.addEventListener('keyup',(e)=>{
+            // console.log(e.key);
+            keyStore.push(e.key);
+            console.log(keyStore)
+            keyStore.splice(-(secretCode.length-1),keyStore.length-secretCode.length)
+
+            if(keyStore.join('').includes(secretCode)){
+                console.log("hey hey hey you got this")
+                cornify_add();
+            }
+        })
+    </script>
+    
+</body>
+</html>
