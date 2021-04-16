@@ -1,0 +1,71 @@
+html{
+    box-sizing: border-box;
+    background: url(jakub-kapusnak-4f4YZfDMLeU-unsplash.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+.container{
+    padding: 20px;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+}
+
+.dishes{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+}
+
+.dishes li{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    font-weight: 200;
+    display: flex;
+}
+
+.dishes label{
+    flex: 1;
+    cursor: pointer;
+}
+
+.dishes input{
+    display: none;
+}
+
+.dishes input + label:before{
+    content: "⬜️";
+    margin-right: 10px;
+
+}
+
+.dishes input:checked + label:before{
+    content: "👍";
+
+}
+
+.add-items{
+    margin-top: 20px;
+}
+
+.add-items input{
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
