@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    background: url("https://source.unsplash.com/nDqA4d5NL0k/2000x2000");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#brand{
+    list-style: inside square;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.459);
+    width: 500px;
+    margin: auto;
+    padding: 0;
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+#brand li{
+    border-bottom: 1px solid rgb(236, 236, 236);
+    padding: 15px;
+}
+
+#brand li:last-child{
+    border-bottom: 0;
+}
+
+a{
+    color: yellow;
+    text-decoration: none;
+}
